@@ -9,7 +9,7 @@ const playBrainCalc = () => {
   const operators = ['+', '-', '*'];
   const randomOperator = getRandomElement(operators);
 
-  const randomOperation = `${firstNumber} ${randomOperator} ${secondNumber}`;
+  const inputData = `${firstNumber} ${randomOperator} ${secondNumber}`;
 
   let correctAnswer = 0;
 
@@ -20,6 +20,6 @@ const playBrainCalc = () => {
   } else if (randomOperator === '*') {
     correctAnswer = firstNumber * secondNumber;
   }
-  return [randomOperation, correctAnswer];
+  return [inputData, correctAnswer];
 };
 export { playBrainCalc, rule };
