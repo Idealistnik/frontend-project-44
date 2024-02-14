@@ -32,6 +32,6 @@ export const getRandomItem = (arr) => {
 };
 
 export const getRandomNumber = (maxValue) => {
-  const randomNumber = Math.floor(Math.random() * maxValue);
+  const randomNumber = Math.ceil(Math.random() * maxValue);
   return randomNumber;
 };
