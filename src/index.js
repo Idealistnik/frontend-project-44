@@ -16,7 +16,7 @@ const mainLogic = (gameCondition, gameType) => {
       console.log('Correct!');
       i += 1;
     } else {
-      console.log(`'${playersAnswer}' is wrong answer ;(. Correct answer was '${rightAnswer}'`);
+      console.log(`${playersAnswer} is wrong answer ;(. Correct answer was ${rightAnswer}`);
       break;
     }
   }
@@ -24,3 +24,14 @@ const mainLogic = (gameCondition, gameType) => {
   return result;
 };
 export default mainLogic;
+
+export const getRandomItem = (arr) => {
+  const randomItemIndex = Math.floor(Math.random() * arr.length);
+  const randomItem = arr[randomItemIndex];
+  return randomItem;
+};
+
+export const getRandomNumber = (maxValue) => {
+  const randomNumber = Math.floor(Math.random() * maxValue);
+  return randomNumber;
+};
