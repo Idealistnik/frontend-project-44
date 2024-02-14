@@ -18,3 +18,6 @@ vs:
 
 link:
 	npm link
+
+demo:
+	asciinema rec demo.cast
