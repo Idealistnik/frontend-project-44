@@ -12,3 +12,6 @@ lint:
 
 vs:
 	code .
+
+link:
+	npm link

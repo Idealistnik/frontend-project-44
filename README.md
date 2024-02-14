@@ -3,4 +3,4 @@
 
 [![Maintainability](https://api.codeclimate.com/v1/badges/c0cc10eaae8125443027/maintainability)](https://codeclimate.com/github/Idealistnik/frontend-project-44/maintainability)
 
-[![asciicast](https://asciinema.org/a/GRqNHUBfwqlUlrCad2dfhC2iI.svg)](https://asciinema.org/a/GRqNHUBfwqlUlrCad2dfhC2iI)
+https://asciinema.org/a/dbtP5CdIAM1vVgeT7fifZ8uQo
