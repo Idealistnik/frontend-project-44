@@ -1,5 +1,5 @@
 import readlineSync from 'readline-sync';
-import { getRandomNumber, getRandomNumberInterval } from '../functions.js';
+import { getRandomNumber, getRandomNumberInterval } from '../index.js';
 
 export const gameCondition = 'What number is missing in the progression?';
 

@@ -1,5 +1,5 @@
 import readlineSync from 'readline-sync';
-import { getRandomNumber } from '../functions.js';
+import { getRandomNumber } from '../index.js';
 
 export const gameCondition = 'Answer "yes" if the number is even, otherwise answer "no".';
 
