@@ -1,5 +1,5 @@
 import readlineSync from 'readline-sync';
-import { getRandomNumber, getRandomItem } from '../index.js';
+import { getRandomNumber, getRandomItem } from '../functions.js';
 
 export const gameCondition = 'What is the result of the expression?';
 

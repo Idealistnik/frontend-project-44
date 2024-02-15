@@ -1,12 +1,17 @@
 import readlineSync from 'readline-sync';
-import { getRandomNumber, getRandomNumberInterval } from '../index.js';
+import { getRandomNumber, getRandomNumberInterval } from '../functions.js';
 
 export const gameCondition = 'What number is missing in the progression?';
 
 const brainProgression = () => {
-  const progressionFirstNum = getRandomNumber(50);
-  const progressionStep = getRandomNumber(5);
-  const progressionSize = getRandomNumberInterval(5, 10);
+  const maxNumber = 50;
+  const progressionFirstNum = getRandomNumber(maxNumber);
+  const maxStep = 5;
+  const progressionStep = getRandomNumber(maxStep);
+  const progressionMinSize = 5;
+  const progressionMaxSize = 10;
+  const progressionSize = getRandomNumberInterval(progressionMinSize, progressionMaxSize);
+
   const progression = [];
   for (let i = 0; i <= progressionSize; i += 1) {
     const progressionIncrease = i * progressionStep;
@@ -14,7 +19,6 @@ const brainProgression = () => {
   }
 
   const progressionReplacement = '..';
-
   const progressionMissedElementIndex = getRandomNumber(progressionSize);
   const progressionMissedElement = progression[progressionMissedElementIndex];
   progression[progressionMissedElementIndex] = progressionReplacement;
