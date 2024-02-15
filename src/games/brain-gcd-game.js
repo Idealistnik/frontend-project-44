@@ -8,12 +8,12 @@ const brainGcd = () => {
   const firstNumber = getRandomNumber(maxNumber);
   const secondNumber = getRandomNumber(maxNumber);
   // const lesserNumber = Math.min(firstNumber, secondNumber);
-  const lesserNumber = firstNumber < secondNumber ? firstNumber : secondNumber;
-  const biggestNumber = lesserNumber === firstNumber ? secondNumber : firstNumber;
+  // const lesserNumber = firstNumber < secondNumber ? firstNumber : secondNumber;
+  // const biggestNumber = lesserNumber === firstNumber ? secondNumber : firstNumber;
   let maxDivider;
 
-  for (let i = lesserNumber; i > 0; i -= 1) {
-    if ((lesserNumber % i === 0) && (biggestNumber % i === 0)) {
+  for (let i = firstNumber; i > 0; i -= 1) {
+    if ((firstNumber % i === 0) && (secondNumber % i === 0)) {
       maxDivider = i;
       break;
     }
