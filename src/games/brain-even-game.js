@@ -6,9 +6,9 @@ export const gameCondition = 'Answer "yes" if the number is even, otherwise answ
 const brainEven = () => {
   const maxNumber = 100;
   const exercise = getRandomNumber(maxNumber);
-  const playersAnswer1 = readlineSync.question(`Question: ${exercise}
+  const playersQuestion = readlineSync.question(`Question: ${exercise}
 Your answer: `);
-  const playersAnswer = `'${playersAnswer1}'`;
+  const playersAnswer = `'${playersQuestion}'`;
   const rightAnswer = exercise % 2 === 0 ? "'yes'" : "'no'";
   return [playersAnswer, rightAnswer];
 };

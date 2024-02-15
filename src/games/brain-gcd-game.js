@@ -20,9 +20,10 @@ const brainGcd = () => {
     }
   }
   const exercise = `${firstNumber} ${secondNumber}`;
-  const playersAnswer = Number(readlineSync.question(`Question: ${exercise}
-Your answer: `));
-  const rightAnswer = maxDivider;
+  const playersQuestion = readlineSync.question(`Question: ${exercise}
+Your answer: `);
+  const playersAnswer = `'${playersQuestion}'`;
+  const rightAnswer = `'${maxDivider}'`;
   return [playersAnswer, rightAnswer];
 };
 export default brainGcd;

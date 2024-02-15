@@ -35,3 +35,8 @@ export const getRandomNumber = (maxValue) => {
   const randomNumber = Math.ceil(Math.random() * maxValue);
   return randomNumber;
 };
+
+export const getRandomNumberInterval = (minValue, maxValue) => {
+  const randomNumber = Math.ceil(Math.random() * (maxValue - minValue) + minValue);
+  return randomNumber;
+};

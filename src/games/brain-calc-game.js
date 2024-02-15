@@ -26,9 +26,10 @@ const brainCalc = () => {
   }
 
   const exercise = `${firstOperand} ${randomOperator} ${secondOperand}`;
-  const playersAnswer = Number(readlineSync.question(`Question: ${exercise}
-Your answer: `));
-  const rightAnswer = expression;
+  const playersQuestion = readlineSync.question(`Question: ${exercise}
+Your answer: `);
+  const playersAnswer = `'${playersQuestion}'`;
+  const rightAnswer = `'${expression}'`;
   return [playersAnswer, rightAnswer];
 };
 export default brainCalc;
