@@ -22,6 +22,7 @@ Your answer: `);
       return roundCount === 3;
     }
   }
-  console.log(`Congratulations, ${playerName}!`);
+  const winMessage = console.log(`Congratulations, ${playerName}!`);
+  return winMessage;
 };
 export default mainLogic;
