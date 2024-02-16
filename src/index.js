@@ -1,54 +1,27 @@
 import readlineSync from 'readline-sync';
 
-const mainLogic = (gameCondition, gameType) => {
+const mainLogic = (gameRule, game) => {
   console.log('Welcome to the Brain Games!');
   const playerName = readlineSync.question('May I have your name? ');
-  const greetingSentence = `Hello, ${playerName}!`;
-  console.log(greetingSentence);
-  console.log(gameCondition);
+  console.log(`Hello, ${playerName}!`);
+  console.log(gameRule);
 
-  let i = 0;
-  for (; i < 3;) {
-    const answers = gameType();
-    const [playersAnswer] = answers;
-    const [, rightAnswer] = answers;
+  let roundCount = 0;
+  for (; roundCount < 3;) {
+    const gameConditions = game();
+    const [question, rightAnswer] = gameConditions;
+    const playersQuestion = readlineSync.question(`Question: ${question}
+Your answer: `);
+    const playersAnswer = `'${playersQuestion}'`;
     if (rightAnswer === playersAnswer) {
       console.log('Correct!');
-      i += 1;
+      roundCount += 1;
     } else {
       console.log(`${playersAnswer} is wrong answer ;(. Correct answer was ${rightAnswer}`);
-      break;
+      console.log(`Let's try again, ${playerName}!`);
+      return roundCount === 3;
     }
   }
-  const result = i === 3 ? console.log(`Congratulations, ${playerName}!`) : console.log(`Let's try again, ${playerName}!`);
-  return result;
+  console.log(`Congratulations, ${playerName}!`);
 };
 export default mainLogic;
-
-export const getRandomItem = (arr) => {
-  const randomItemIndex = Math.floor(Math.random() * arr.length);
-  const randomItem = arr[randomItemIndex];
-  return randomItem;
-};
-
-export const getRandomNumber = (maxValue) => {
-  const randomNumber = Math.ceil(Math.random() * maxValue);
-  return randomNumber;
-};
-
-export const getRandomNumberInterval = (minValue, maxValue) => {
-  const randomNumber = Math.ceil(Math.random() * (maxValue - minValue) + minValue);
-  return randomNumber;
-};
-
-export const isPrime = (num) => {
-  if (num < 2) {
-    return false;
-  }
-  for (let divider = 2; divider < num / 2; divider += 1) {
-    if (num % divider === 0) {
-      return false;
-    }
-  }
-  return true;
-};

@@ -1,14 +1,14 @@
-import readlineSync from 'readline-sync';
-import { getRandomNumber, getRandomItem } from '../index.js';
+import { getRandomNumberInterval } from '../functions.js';
 
-export const gameCondition = 'What is the result of the expression?';
+export const gameRule = 'What is the result of the expression?';
 
 const brainCalc = () => {
   const maxNumber = 10;
-  const firstOperand = getRandomNumber(maxNumber);
-  const secondOperand = getRandomNumber(maxNumber);
+  const firstOperand = getRandomNumberInterval(maxNumber);
+  const secondOperand = getRandomNumberInterval(maxNumber);
   const operators = ['+', '-', '*'];
-  const randomOperator = getRandomItem(operators);
+  const randomOperatorIndex = getRandomNumberInterval(operators.length - 1);
+  const randomOperator = operators[randomOperatorIndex];
 
   let expression;
   switch (randomOperator) {
@@ -25,11 +25,8 @@ const brainCalc = () => {
       break;
   }
 
-  const exercise = `${firstOperand} ${randomOperator} ${secondOperand}`;
-  const playersQuestion = readlineSync.question(`Question: ${exercise}
-Your answer: `);
-  const playersAnswer = `'${playersQuestion}'`;
+  const question = `${firstOperand} ${randomOperator} ${secondOperand}`;
   const rightAnswer = `'${expression}'`;
-  return [playersAnswer, rightAnswer];
+  return [question, rightAnswer];
 };
 export default brainCalc;

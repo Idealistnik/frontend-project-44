@@ -3,12 +3,12 @@
 
 [![Maintainability](https://api.codeclimate.com/v1/badges/c0cc10eaae8125443027/maintainability)](https://codeclimate.com/github/Idealistnik/frontend-project-44/maintainability)
 
-https://asciinema.org/a/dbtP5CdIAM1vVgeT7fifZ8uQo
+https://asciinema.org/a/B1aHl7NAgl7ySxkh6kW2gR9AY
 
-https://asciinema.org/a/IeRC1tfq912XSixG6YDxiPP7e
+https://asciinema.org/a/lrSoM5pDKBy59NY2MDXF2jqBT
 
-https://asciinema.org/a/HHgX8s0Ny2tt13szQ4ACALYqS
+https://asciinema.org/a/Bk6hRY1MLJitvnuzI9Y5ZEI0U
 
-https://asciinema.org/a/O2TXcoe5sitq8WQWA5mPPmTsD
+https://asciinema.org/a/5CHukFBegT1rYAZCfewBR3mNK
 
-https://asciinema.org/a/JvfuDrmPSwKKoCgRWpG1S4N6T
+https://asciinema.org/a/DBuQCjVAsoyk8FsbSoBoqtLWX

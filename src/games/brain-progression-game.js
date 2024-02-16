@@ -1,13 +1,12 @@
-import readlineSync from 'readline-sync';
-import { getRandomNumber, getRandomNumberInterval } from '../index.js';
+import { getRandomNumberInterval } from '../functions.js';
 
-export const gameCondition = 'What number is missing in the progression?';
+export const gameRule = 'What number is missing in the progression?';
 
 const brainProgression = () => {
   const maxNumber = 50;
-  const progressionFirstNum = getRandomNumber(maxNumber);
+  const progressionFirstNum = getRandomNumberInterval(maxNumber);
   const maxStep = 5;
-  const progressionStep = getRandomNumber(maxStep);
+  const progressionStep = getRandomNumberInterval(maxStep);
   const progressionMinSize = 5;
   const progressionMaxSize = 10;
   const progressionSize = getRandomNumberInterval(progressionMinSize, progressionMaxSize);
@@ -19,17 +18,13 @@ const brainProgression = () => {
   }
 
   const progressionReplacement = '..';
-  const progressionMissedElementIndex = getRandomNumber(progressionSize);
+  const progressionMissedElementIndex = getRandomNumberInterval(progressionSize);
   const progressionMissedElement = progression[progressionMissedElementIndex];
   progression[progressionMissedElementIndex] = progressionReplacement;
 
   const separator = ' ';
-  const exercise = progression.join(separator);
-
-  const playersQuestion = readlineSync.question(`Question: ${exercise}
-Your answer: `);
-  const playersAnswer = `'${playersQuestion}'`;
+  const question = progression.join(separator);
   const rightAnswer = `'${progressionMissedElement}'`;
-  return [playersAnswer, rightAnswer];
+  return [question, rightAnswer];
 };
 export default brainProgression;
