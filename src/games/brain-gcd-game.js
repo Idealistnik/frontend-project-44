@@ -1,8 +1,8 @@
 import { getRandomNumberInterval } from '../functions.js';
-
-export const gameRule = 'Find the greatest common divisor of given numbers.';
+import mainLogic from '../index.js';
 
 const brainGcd = () => {
+  const gameRule = 'Find the greatest common divisor of given numbers.';
   const maxNumber = 20;
   const firstNumber = getRandomNumberInterval(maxNumber);
   const secondNumber = getRandomNumberInterval(maxNumber);
@@ -18,6 +18,12 @@ const brainGcd = () => {
   }
   const question = `${firstNumber} ${secondNumber}`;
   const rightAnswer = `'${maxDivider}'`;
-  return [question, rightAnswer];
+  const conditions = [question, rightAnswer];
+  return [gameRule, conditions];
 };
-export default brainGcd;
+
+const brainGcdGame = () => {
+  mainLogic(brainGcd);
+};
+
+export default brainGcdGame;

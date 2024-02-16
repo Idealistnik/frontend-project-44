@@ -1,11 +1,17 @@
 import { getRandomNumberInterval } from '../functions.js';
-
-export const gameRule = 'Answer "yes" if the number is even, otherwise answer "no".';
+import mainLogic from '../index.js';
 
 const brainEven = () => {
+  const gameRule = 'Answer "yes" if the number is even, otherwise answer "no".';
   const maxNumber = 100;
   const question = getRandomNumberInterval(maxNumber);
   const rightAnswer = question % 2 === 0 ? "'yes'" : "'no'";
-  return [question, rightAnswer];
+  const conditions = [question, rightAnswer];
+  return [gameRule, conditions];
 };
-export default brainEven;
+
+const brainEvenGame = () => {
+  mainLogic(brainEven);
+};
+
+export default brainEvenGame;

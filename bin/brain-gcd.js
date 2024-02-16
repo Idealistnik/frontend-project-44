@@ -1,5 +1,4 @@
 #!/usr/bin/env node
-import brainGcd, { gameRule } from '../src/games/brain-gcd-game.js';
-import mainLogic from '../src/index.js';
+import brainGcdGame from '../src/games/brain-gcd-game.js';
 
-mainLogic(gameRule, brainGcd);
+brainGcdGame();

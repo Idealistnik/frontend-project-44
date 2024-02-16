@@ -1,8 +1,8 @@
 import { getRandomNumberInterval } from '../functions.js';
-
-export const gameRule = 'What number is missing in the progression?';
+import mainLogic from '../index.js';
 
 const brainProgression = () => {
+  const gameRule = 'What number is missing in the progression?';
   const maxNumber = 50;
   const progressionFirstNum = getRandomNumberInterval(maxNumber);
   const maxStep = 5;
@@ -25,6 +25,12 @@ const brainProgression = () => {
   const separator = ' ';
   const question = progression.join(separator);
   const rightAnswer = `'${progressionMissedElement}'`;
-  return [question, rightAnswer];
+  const conditions = [question, rightAnswer];
+  return [gameRule, conditions];
 };
-export default brainProgression;
+
+const brainProgressionGame = () => {
+  mainLogic(brainProgression);
+};
+
+export default brainProgressionGame;
