@@ -1,38 +1,24 @@
-import { getRandomNumberInterval } from '../functions.js';
+import { getRandomNumberInterval, calculate } from '../functions.js';
 import mainLogic from '../index.js';
 
+const gameRule = 'What is the result of the expression?';
+
 const brainCalc = () => {
-  const gameRule = 'What is the result of the expression?';
-  const maxNumber = 10;
-  const firstOperand = getRandomNumberInterval(maxNumber);
-  const secondOperand = getRandomNumberInterval(maxNumber);
+  const firstNumber = getRandomNumberInterval(10);
+  const secondNumber = getRandomNumberInterval(10);
   const operators = ['+', '-', '*'];
   const randomOperatorIndex = getRandomNumberInterval(operators.length - 1);
-  const randomOperator = operators[randomOperatorIndex];
+  const operator = operators[randomOperatorIndex];
 
-  let expression;
-  switch (randomOperator) {
-    case '+':
-      expression = firstOperand + secondOperand;
-      break;
-    case '-':
-      expression = firstOperand - secondOperand;
-      break;
-    case '*':
-      expression = firstOperand * secondOperand;
-      break;
-    default:
-      break;
-  }
+  const expression = calculate(firstNumber, secondNumber, operator);
 
-  const question = `${firstOperand} ${randomOperator} ${secondOperand}`;
+  const question = `${firstNumber} ${operator} ${secondNumber}`;
   const rightAnswer = `'${expression}'`;
-  const conditions = [question, rightAnswer];
-  return [gameRule, conditions];
+  return [question, rightAnswer];
 };
 
 const brainCalcGame = () => {
-  mainLogic(brainCalc);
+  mainLogic(gameRule, brainCalc);
 };
 
 export default brainCalcGame;
