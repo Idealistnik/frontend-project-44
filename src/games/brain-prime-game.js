@@ -1,4 +1,4 @@
-import { getRandomNumberInterval, isPrime} from '../functions.js';
+import { getRandomNumberInterval, isPrime } from '../functions.js';
 import mainLogic from '../index.js';
 
 const gameRule = 'Answer "yes" if given number is prime. Otherwise answer "no".';
