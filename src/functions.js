@@ -30,18 +30,6 @@ export const getNod = (firstNumber, secondNumber) => {
   return getNod(secondNumber, firstNumber % secondNumber);
 };
 
-export const isPrime = (num) => {
-  if (num < 2) {
-    return false;
-  }
-  for (let divider = 2; divider < num / 2; divider += 1) {
-    if (num % divider === 0) {
-      return false;
-    }
-  }
-  return true;
-};
-
 export const makeProgression = (progressionFirstNum, progressionSize, progressionStep) => {
   const result = [];
   for (let i = 0; i < progressionSize; i += 1) {

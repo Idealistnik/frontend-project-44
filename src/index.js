@@ -5,7 +5,7 @@ const mainLogic = (gameRule, game) => {
   const playerName = readlineSync.question('May I have your name? ');
   console.log(`Hello, ${playerName}!`);
   console.log(gameRule);
-  
+
   let roundCount = 0;
   const maxRoundCount = 3;
   for (; roundCount < maxRoundCount;) {
