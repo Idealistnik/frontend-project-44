@@ -32,7 +32,7 @@ export const getNod = (firstNumber, secondNumber) => {
 
 export const makeProgression = (progressionFirstNum, progressionSize, progressionStep) => {
   const result = [];
-  for (let i = 0; i <= progressionSize; i += 1) {
+  for (let i = 0; i <= progressionSize - 1; i += 1) {
     const progressionIncrease = i * progressionStep;
     result.push(progressionFirstNum + progressionIncrease);
   }
