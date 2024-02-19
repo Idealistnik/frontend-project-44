@@ -38,3 +38,15 @@ export const makeProgression = (progressionFirstNum, progressionSize, progressio
   }
   return result;
 };
+
+export const isPrime = (num) => {
+  if (num < 2) {
+    return false;
+  }
+  for (let divider = 2; divider < num / 2; divider += 1) {
+    if (num % divider === 0) {
+      return false;
+    }
+  }
+  return true;
+};

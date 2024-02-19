@@ -8,6 +8,7 @@ const brainProgression = () => {
   const progressionStep = getRandomNumberInterval(5);
   const progressionSize = getRandomNumberInterval(5, 10);
   const progression = makeProgression(progressionFirstNum, progressionSize, progressionStep);
+  console.log(progression);
 
   const progressionReplacement = '..';
   const progressionMissedElementIndex = getRandomNumberInterval(progressionSize);
