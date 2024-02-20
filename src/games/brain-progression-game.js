@@ -1,5 +1,14 @@
-import { getRandomNumberInterval, makeProgression } from '../functions.js';
+import getRandomNumberInterval from '../functions.js';
 import mainLogic from '../index.js';
+
+export const makeProgression = (progressionFirstNum, progressionSize, progressionStep) => {
+  const result = [];
+  for (let i = 0; i < progressionSize; i += 1) {
+    const progressionIncrease = i * progressionStep;
+    result.push(progressionFirstNum + progressionIncrease);
+  }
+  return result;
+};
 
 const gameRule = 'What number is missing in the progression?';
 
@@ -14,9 +23,8 @@ const brainProgression = () => {
   const progressionMissedElement = progression[progressionMissedElementIndex];
   progression[progressionMissedElementIndex] = progressionReplacement;
 
-  const separator = ' ';
-  const question = progression.join(separator);
-  const rightAnswer = `'${progressionMissedElement}'`;
+  const question = progression.join(' ');
+  const rightAnswer = progressionMissedElement.toString();
   return [question, rightAnswer];
 };
 

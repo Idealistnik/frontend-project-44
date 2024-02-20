@@ -1,5 +1,18 @@
-import { getRandomNumberInterval, calculate } from '../functions.js';
+import getRandomNumberInterval from '../functions.js';
 import mainLogic from '../index.js';
+
+const calculate = (firstOperand, secondOperand, operator) => {
+  switch (operator) {
+    case '+':
+      return firstOperand + secondOperand;
+    case '-':
+      return firstOperand - secondOperand;
+    case '*':
+      return firstOperand * secondOperand;
+    default:
+      throw new Error(`'${operator}' is not readable`);
+  }
+};
 
 const gameRule = 'What is the result of the expression?';
 
@@ -13,7 +26,7 @@ const brainCalc = () => {
   const expression = calculate(firstNumber, secondNumber, operator);
 
   const question = `${firstNumber} ${operator} ${secondNumber}`;
-  const rightAnswer = `'${expression}'`;
+  const rightAnswer = expression.toString();
   return [question, rightAnswer];
 };
 

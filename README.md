@@ -3,12 +3,24 @@
 
 [![Maintainability](https://api.codeclimate.com/v1/badges/c0cc10eaae8125443027/maintainability)](https://codeclimate.com/github/Idealistnik/frontend-project-44/maintainability)
 
-https://asciinema.org/a/6QSms400ECA838icpl6QqDAhZ
+## «Игры разума» 
+«Игры разума» — набор из пяти консольных игр для прокачки мозга. Каждая игра задает вопросы, на которые нужно дать правильные ответы. После трех правильных ответов считается, что игра пройдена. Неправильные ответы завершают игру и предлагают пройти ее заново. Игры:
 
-https://asciinema.org/a/oPjbNL3tA4XjBR2L9M57JKZz7
+Калькулятор - aрифметические выражения, которые необходимо вычислить.
+2. Прогрессия- gоиск пропущенных чисел в последовательности чисел.
+3. Определение четного числа.
+4. Определение наибольшего общего делителя.
+5. Определение простого числа.
 
-https://asciinema.org/a/WVTjvvcMA137v7zuApVGJC1MB
+Для установки игры необходимо установить пакет @hexlet/code. Для запуска игр необходимо ввести команду соответствующую игре, указанную выше.
+Пример игры:
 
-https://asciinema.org/a/UQ8rpmytHakvAWX9lWTJ4TJlg
+[![asciicast](https://asciinema.org/a/6QSms400ECA838icpl6QqDAhZ.svg)](https://asciinema.org/a/6QSms400ECA838icpl6QqDAhZ)
 
-https://asciinema.org/a/O8dQaGv89YcGOSkUZMb3BGAVm
+[![asciicast](https://asciinema.org/a/oPjbNL3tA4XjBR2L9M57JKZz7.svg)](https://asciinema.org/a/oPjbNL3tA4XjBR2L9M57JKZz7)
+
+[![asciicast](https://asciinema.org/a/WVTjvvcMA137v7zuApVGJC1MB.svg)](https://asciinema.org/a/WVTjvvcMA137v7zuApVGJC1MB)
+
+[![asciicast](https://asciinema.org/a/UQ8rpmytHakvAWX9lWTJ4TJlg.svg)](https://asciinema.org/a/UQ8rpmytHakvAWX9lWTJ4TJlg)
+
+[![asciicast](https://asciinema.org/a/O8dQaGv89YcGOSkUZMb3BGAVm.svg)](https://asciinema.org/a/O8dQaGv89YcGOSkUZMb3BGAVm)

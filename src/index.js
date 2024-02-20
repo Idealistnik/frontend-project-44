@@ -10,14 +10,13 @@ const mainLogic = (gameRule, game) => {
   const maxRoundCount = 3;
   for (; roundCount < maxRoundCount;) {
     const [question, rightAnswer] = game();
-    const playersQuestion = readlineSync.question(`Question: ${question}
-Your answer: `);
-    const playersAnswer = `'${playersQuestion}'`;
+    console.log(`Question: ${question}`);
+    const playersAnswer = readlineSync.question('Your answer: ');
     if (rightAnswer === playersAnswer) {
       console.log('Correct!');
       roundCount += 1;
     } else {
-      console.log(`${playersAnswer} is wrong answer ;(. Correct answer was ${rightAnswer}.`);
+      console.log(`'${playersAnswer}' is wrong answer ;(. Correct answer was '${rightAnswer}'.`);
       console.log(`Let's try again, ${playerName}!`);
       return;
     }
