@@ -5,7 +5,7 @@ export const isPrime = (num) => {
   if (num < 2) {
     return false;
   }
-  for (let divider = 2; divider <= num / 2; divider += 1) {
+  for (let divider = 2; divider <= Math.sqrt(num); divider += 1) {
     if (num % divider === 0) {
       return false;
     }
